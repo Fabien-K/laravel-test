@@ -34,3 +34,7 @@ Route::redirect('/test', '/hello');
 
 Route::get('/home/{name}', 'PremierController@home');
 
+Route::get('/layout', function(){
+    return view('layouts.app');
+});
+Route::get('/second', 'PremierController@second' );

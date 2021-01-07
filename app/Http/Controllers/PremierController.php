@@ -12,4 +12,10 @@ Class PremierController extends Controller {
       'name'=> $transformed
     ]);
   }
+  public function second(){
+    $age = 36;
+    return view('second', [      
+        'age'=> $age  
+    ]);
+  }
 }
