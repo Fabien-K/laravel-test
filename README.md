@@ -1,5 +1,5 @@
 ## test fonctionalités
-
+- php artisan serve
 ### Controller
 - creation controller CRUD : php artisan make:controller -r  ArticleController
 
@@ -10,3 +10,11 @@
 - @if @else @endif
 - @php @endphp
 - @foreach @endforeach
+
+### BDD
+- php artisan migrate
+- PDOException::("SQLSTATE[42000]: Syntax error or access violation: 1071 La clé est 
+trop longue. Longueur maximale: 1000")
+solution
+App/providers/AppServiceProvider.php 
+Schema::defaultStringLength('171');
