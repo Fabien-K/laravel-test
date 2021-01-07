@@ -32,3 +32,5 @@ Route::get('/redirection', function(){
 });
 Route::redirect('/test', '/hello');
 
+Route::get('/home/{name}', 'PremierController@home');
+
