@@ -29,3 +29,11 @@ Schema::defaultStringLength('171');
 
 ### Model
 - php artisan make:model Article 
+
+### SEEDER
+
+- php artisan make:seed ArticleSeeder // prépare un seed executé par databaseSeeder
+- php artisan db:seed // lance les seed ciblé
+- php artisan db:seed --class=DataSeeder // lance LE seed selectioné ici DataSeeder
+
+-php artisan tinker // shell pour utiliser php ...
