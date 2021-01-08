@@ -38,3 +38,5 @@ Route::get('/layout', function(){
     return view('layouts.app');
 });
 Route::get('/post-article', 'ArticleController@index');
+Route::get('/new', 'ArticleController@create');
+Route::post('/store', 'ArticleController@store')->name('article.store');

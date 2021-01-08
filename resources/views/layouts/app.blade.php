@@ -12,9 +12,8 @@
   </head>
   <body>
     @include('incs.navbar')
-    <h1>Hello, world!</h1>
     @yield('content')
-    @include('incs.footer')
+    {{-- @include('incs.footer') --}}
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
