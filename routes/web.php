@@ -37,4 +37,4 @@ Route::get('/home/{name}', 'PremierController@home');
 Route::get('/layout', function(){
     return view('layouts.app');
 });
-Route::get('/second', 'PremierController@second' );
+Route::get('/post-article', 'ArticleController@index');

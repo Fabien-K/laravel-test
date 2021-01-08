@@ -12,9 +12,20 @@
 - @foreach @endforeach
 
 ### BDD
-- php artisan migrate
+- php artisan config:clear 
+- php artisan route:clear
+- php artisan cache:clear
+
+- php artisan make:migration create_post_table // crée une table post
+- php artisan migrate:reset // rollback toutes les migrations
+- php artisan migrate:rollback //annule la derniere migration
+- php artisan migrate:refresh // rollback toutes les migrations et les migrate juste apres
+- php artisan migrate // envoie la migration en basse de données
 - PDOException::("SQLSTATE[42000]: Syntax error or access violation: 1071 La clé est 
 trop longue. Longueur maximale: 1000")
 solution
 App/providers/AppServiceProvider.php 
 Schema::defaultStringLength('171');
+
+### Model
+- php artisan make:model Article 
