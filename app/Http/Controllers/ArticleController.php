@@ -8,6 +8,13 @@ use Illuminate\Http\Request;
 class ArticleController extends Controller
 {
     /**
+     * Protege l'ensemble des méthode en utilisant le middleware auth
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');    
+    }
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response

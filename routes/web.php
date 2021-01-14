@@ -40,3 +40,6 @@ Route::get('/layout', function(){
 Route::get('/post-article', 'ArticleController@index');
 Route::get('/new', 'ArticleController@create');
 Route::post('/store', 'ArticleController@store')->name('article.store');
+Route::get('/failure', function(){
+    return view('failure');
+})->name('failure');
