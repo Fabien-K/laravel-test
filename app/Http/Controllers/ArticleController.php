@@ -39,13 +39,17 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
+        $validateData = $request -> validate([
+            'title' => 'required|max:150',
+            'content' => 'required|max:600',
+        ]);
         $article = new Article();
         $title = $request->input('title');
         $content = $request->input('content');
         $article->title = $title;
         $article->content = $content;
         $article->save();   
-        dd($article);
+        //dd($article);
         return redirect()->back(); 
     }
 
