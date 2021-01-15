@@ -10,10 +10,10 @@ class ArticleController extends Controller
     /**
      * Protege l'ensemble des méthode en utilisant le middleware auth
      */
-    public function __construct()
-    {
-        $this->middleware('auth');    
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');    
+    // }
     /**
      * Display a listing of the resource.
      *
@@ -51,7 +51,7 @@ class ArticleController extends Controller
             'content' => 'required|max:600',
         ]);
         $article = new Article();
-        $title = $request->input('title');
+        $title = strip_tags($request->input('title'));
         $content = $request->input('content');
         $article->title = $title;
         $article->content = $content;
